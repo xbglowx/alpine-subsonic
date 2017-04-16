@@ -1,6 +1,4 @@
-FROM alpine
-
-MAINTAINER paganini@paganini.net
+FROM alpine:latest
 
 # Desired UID & GID
 ENV SUBSONIC_UID=10000
