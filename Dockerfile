@@ -8,7 +8,8 @@ ENV SUBSONIC_DATA=/var/subsonic
 ENV SUBSONIC_VERSION 6.0
 
 # Add subsonic tar.gz
-ADD http://subsonic.org/download/subsonic-${SUBSONIC_VERSION}-standalone.tar.gz /tmp/subsonic.tar.gz
+ADD https://s3-eu-west-1.amazonaws.com/subsonic-public/download/subsonic-${SUBSONIC_VERSION}-standalone.tar.gz \
+    /tmp/subsonic.tar.gz
 
 # - Create a new group 'subsonic' with SUBSONIC_GID, home $SUBSONIC_HOME
 # - Create user 'subsonic' with SUBSONIC_UID, add to that group.
