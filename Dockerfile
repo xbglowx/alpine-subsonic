@@ -40,7 +40,7 @@ RUN apk --no-cache add openjdk8-jre-base ffmpeg
 #
 # TODO: Investigate if this is really needed.
 RUN mkdir -p $SUBSONIC_DATA/transcode && \
-    ln /usr/bin/ffmpeg /usr/bin/lame $SUBSONIC_DATA/transcode
+    ln -sfn /usr/bin/ffmpeg /usr/bin/lame $SUBSONIC_DATA/transcode
 
 VOLUME $SUBSONIC_DATA
 
